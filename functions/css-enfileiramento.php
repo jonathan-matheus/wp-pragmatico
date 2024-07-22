@@ -9,7 +9,6 @@
  */
 function css_enfileiramento()
 {
-    // Enfileira o arquivo de cores
     wp_enqueue_style(
         'cores',
         get_template_directory_uri() . '/css/cores.css',
@@ -18,7 +17,9 @@ function css_enfileiramento()
         'all'
     );
 
-    // Adiciona a propriedade de cor de fundo
+    /**
+     * Adiciona a propriedade de cor de fundo
+     */
     wp_add_inline_style(
         'cores',
         'body { background-color: ' . get_theme_mod('sec_cores') . '}'

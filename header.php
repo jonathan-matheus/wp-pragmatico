@@ -8,4 +8,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php wp_body_open(); ?>
+    <?php
+    wp_body_open();
+    ?>
+    <header>
+        <!-- Logo customizado -->
+        <?php
+        the_custom_logo();
+        ?>
+    </header>
