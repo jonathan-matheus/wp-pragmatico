@@ -7,8 +7,7 @@ function wp_pragmatico_customize($wp_customize)
     $wp_customize->add_section(
         'sec_cores',
         [
-            'title' => __('Cores', 'wp-pragmatico'),
-            'description' => __('Cores do tema', 'wp-pragmatico')
+            'title' => __('Color', 'wp-pragmatico')
         ]
     );
 
@@ -24,7 +23,7 @@ function wp_pragmatico_customize($wp_customize)
             $wp_customize,
             'sec_cores',
             [
-                'label' => __('Cor de fundo', 'wp-pragmatico'),
+                'label' => __('Background Color', 'wp-pragmatico'),
                 'section' => 'colors',
                 'settings' => 'sec_cores'
             ]

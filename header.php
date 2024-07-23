@@ -14,6 +14,10 @@
     <header>
         <!-- Logo customizado -->
         <?php
-        the_custom_logo();
+        if (has_custom_logo()) {
+            the_custom_logo();
+        } else {
+            echo '<img src="' . get_template_directory_uri() . '/assets/images/logo_padrao.png" alt="logo">';
+        }
         ?>
     </header>
