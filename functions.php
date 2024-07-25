@@ -7,3 +7,6 @@ require_once get_template_directory() . '/functions/css-enfileiramento.php';
 
 // funções de suporte
 require_once get_template_directory() . '/functions/suporte.php';
+
+// funções de menus
+require_once get_template_directory() . '/functions/menus.php';

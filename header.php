@@ -14,10 +14,20 @@
     <header>
         <!-- Logo customizado -->
         <?php
-        if (has_custom_logo()) {
-            the_custom_logo();
-        } else {
-            echo '<img src="' . get_template_directory_uri() . '/assets/images/logo_padrao.png" alt="logo">';
-        }
+        ?>
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+            <?php
+            if (has_custom_logo()) {
+                the_custom_logo();
+            } else {
+                echo '<img src="' . get_template_directory_uri() . '/assets/images/logo_padrao.png" alt="logo">';
+            }
+            ?>
+        </a>
+
+        <?php
+        wp_nav_menu([
+            'theme_location' => 'main-menu',
+        ]);
         ?>
     </header>
