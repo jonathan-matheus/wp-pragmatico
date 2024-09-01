@@ -1,4 +1,8 @@
 <?php
+/**
+ * Define os elementos de personalização do tema
+ */
+
 function wp_pragmatico_customize($wp_customize)
 {
     /**
