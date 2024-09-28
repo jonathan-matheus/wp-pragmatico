@@ -11,6 +11,18 @@
     <?php
     wp_body_open();
     ?>
+    <!--
+    Estilos de css que precisam ser customizados. Estes etilos estão sendo 
+    aplicados aqui, pois seus valores vêm da parte de customização ou 
+    personalização do tema.
+    -->
+    <style>
+        body {
+            background-color:
+                <?= get_theme_mod('sec_cores') ?>
+            ;
+        }
+    </style>
     <header>
         <!-- Logo customizado -->
         <?php

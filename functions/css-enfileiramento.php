@@ -10,25 +10,6 @@
 function css_enfileiramento()
 {
     /**
-     * Enfileira o arquivo css cores.css
-     */
-    wp_enqueue_style(
-        'cores',
-        get_template_directory_uri() . '/css/cores.css',
-        [],
-        '0.0',
-        'all'
-    );
-
-    /**
-     * Adiciona a propriedade de cor de fundo
-     */
-    wp_add_inline_style(
-        'cores',
-        'body { background-color: ' . get_theme_mod('sec_cores') . '}'
-    );
-
-    /**
      * Enfileira o arquivo css header.css
      */
     wp_enqueue_style(
