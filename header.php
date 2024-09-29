@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
@@ -19,7 +19,20 @@
     <style>
         body {
             background-color:
-                <?= get_theme_mod('sec_cores') ?>
+                <?= get_theme_mod('set_cores') ?>
+            ;
+        }
+
+        nav ul li a {
+            color:
+                <?= get_theme_mod('set_text_main_cores') ?>
+            ;
+            transition: 0.5s;
+        }
+
+        nav ul li a:hover {
+            color:
+                <?= get_theme_mod('set_text_hover_main_cores') ?>
             ;
         }
     </style>
@@ -38,9 +51,11 @@
         </a>
 
         <!-- Menu customizado -->
-        <?php
-        wp_nav_menu([
-            'theme_location' => 'main-menu',
-        ]);
-        ?>
+        <nav>
+            <?php
+            wp_nav_menu([
+                'theme_location' => 'main-menu',
+            ]);
+            ?>
+        </nav>
     </header>
