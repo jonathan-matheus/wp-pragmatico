@@ -32,5 +32,18 @@ function css_enfileiramento()
         '0.0',
         'all'
     );
+
+    /**
+     * Enfileira o arquivo css fonts.css
+     * 
+     * Arquivo responsavel pelas fontes do site
+     */
+    wp_enqueue_style(
+        'fonts',
+        get_template_directory_uri() . '/css/fonts.css',
+        [],
+        '0.0',
+        'all'
+    );
 }
 add_action('wp_enqueue_scripts', 'css_enfileiramento');

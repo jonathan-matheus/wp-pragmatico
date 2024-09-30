@@ -35,6 +35,25 @@
                 <?= get_theme_mod('set_text_hover_main_cores') ?>
             ;
         }
+
+        #button_header a {
+            color:
+                <?= get_theme_mod('set_text_button_cores') ?>
+            ;
+            background-color:
+                <?= get_theme_mod('set_button_background_cores') ?>
+            ;
+            transition: 0.5s;
+        }
+
+        #button_header a:hover {
+            color:
+                <?= get_theme_mod('set_text_hover_button_cores') ?>
+            ;
+            background-color:
+                <?= get_theme_mod('set_button_hover_background_cores') ?>
+            ;
+        }
     </style>
     <header>
         <!-- Logo customizado -->
@@ -51,11 +70,24 @@
         </a>
 
         <!-- Menu customizado -->
-        <nav>
+        <div id="menu_header">
+            <nav>
+                <?php
+                wp_nav_menu([
+                    'menu_class' => 'font-poppins-0',
+                    'theme_location' => 'main-menu',
+                ]);
+                ?>
+            </nav>
             <?php
-            wp_nav_menu([
-                'theme_location' => 'main-menu',
-            ]);
+            $set_button = get_theme_mod('set_button');
+            if (isset($set_button)) {
+                ?>
+                <div id="button_header" class="font-poppins-0">
+                    <a href="<?= get_theme_mod('set_button') ?>""><?= get_theme_mod('set_text_button') ?></a>
+                </div>
+                <?php
+            }
             ?>
-        </nav>
+        </div>
     </header>
