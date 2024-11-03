@@ -1,5 +1,9 @@
 <?php
 /**
+ * TODO: Alterar o nome do arquivo para customizer_color.php. 
+ */
+
+/**
  * Define os elementos de cor da sessão de personalização do tema
  * 
  * @param mixed $wp_customize
@@ -83,6 +87,10 @@ function wp_pragmatico_customize_sec_cores($wp_customize)
     );
 }
 add_action('customize_register', 'wp_pragmatico_customize_sec_cores');
+
+/**
+ * TODO: Separa a parte do código abaixo em outro arquivo, chamado customizer_button.php
+ */
 
 /**
  * Define os elementos do botão de ação do cabeçalho do site

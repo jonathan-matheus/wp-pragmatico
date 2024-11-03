@@ -3,6 +3,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-top: 35px;
+  flex-wrap: wrap;
 }
 
 /*MENU PRINCIPAL*/
@@ -10,6 +11,7 @@ nav div ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 nav div ul li {
@@ -27,10 +29,17 @@ nav div ul li {
 #menu_header {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #button_header a {
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: space-evenly;
+  }
 }
