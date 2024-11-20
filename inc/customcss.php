@@ -14,7 +14,7 @@
 
     nav ul li a {
         color:
-            <?= get_theme_mod('set_text_main_cores', WP_PRAGMATICO_TEXT_HOVER_MAIN_COLOR) ?>
+            <?= get_theme_mod('set_text_main_cores', WP_PRAGMATICO_TEXT_MAIN_COLOR) ?>
         ;
         transition: 0.5s;
     }
