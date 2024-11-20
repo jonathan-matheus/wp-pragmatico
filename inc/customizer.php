@@ -27,7 +27,7 @@ function wp_pragmatico_customize_sec_cores($wp_customize)
     $wp_customize->add_setting(
         'set_cores',
         [
-            'default' => '#000000'
+            'default' => WP_PRAGMATICO_BACKGROUND_COLOR
         ]
     );
 
@@ -50,7 +50,7 @@ function wp_pragmatico_customize_sec_cores($wp_customize)
     $wp_customize->add_setting(
         'set_text_main_cores',
         [
-            'default' => '#ffffff'
+            'default' => WP_PRAGMATICO_TEXT_MAIN_COLOR
         ]
     );
 
@@ -70,7 +70,7 @@ function wp_pragmatico_customize_sec_cores($wp_customize)
     $wp_customize->add_setting(
         'set_text_hover_main_cores',
         [
-            'default' => '#808080'
+            'default' => WP_PRAGMATICO_TEXT_HOVER_MAIN_COLOR
         ]
     );
 
@@ -106,7 +106,7 @@ function wp_pragmatico_customize_sec_button($wp_customize)
     $wp_customize->add_section(
         'sec_button',
         [
-            'title' => __('Button', 'wp-pragmatico')
+            'title' => __(WP_PRAGMATICO_TEXT_BUTTON, 'wp-pragmatico')
         ]
     );
 
@@ -114,7 +114,7 @@ function wp_pragmatico_customize_sec_button($wp_customize)
     $wp_customize->add_setting(
         'set_text_button',
         [
-            'default' => 'Button'
+            'default' => WP_PRAGMATICO_TEXT_BUTTON
         ]
     );
 
@@ -132,7 +132,7 @@ function wp_pragmatico_customize_sec_button($wp_customize)
     $wp_customize->add_setting(
         'set_button',
         [
-            'default' => '#'
+            'default' => WP_PRAGMATICO_LINK
         ]
     );
 
@@ -150,7 +150,7 @@ function wp_pragmatico_customize_sec_button($wp_customize)
     $wp_customize->add_setting(
         'set_text_button_cores',
         [
-            'default' => '#000000'
+            'default' => WP_PRAGMATICO_TEXT_BUTTON_COLOR
         ]
     );
 
@@ -170,7 +170,7 @@ function wp_pragmatico_customize_sec_button($wp_customize)
     $wp_customize->add_setting(
         'set_text_hover_button_cores',
         [
-            'default' => '#ffffff'
+            'default' => WP_PRAGMATICO_TEXT_HOVER_BUTTON_COLOR
         ]
     );
 
@@ -190,7 +190,7 @@ function wp_pragmatico_customize_sec_button($wp_customize)
     $wp_customize->add_setting(
         'set_button_background_cores',
         [
-            'default' => '#ffffff'
+            'default' => WP_PRAGMATICO_BUTTON_BACKGROUND_COLOR
         ]
     );
 
@@ -210,7 +210,7 @@ function wp_pragmatico_customize_sec_button($wp_customize)
     $wp_customize->add_setting(
         'set_button_hover_background_cores',
         [
-            'default' => '#808080'
+            'default' => WP_PRAGMATICO_BUTTON_HOVER_BACKGROUND_COLOR
         ]
     );
 

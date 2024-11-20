@@ -1,4 +1,7 @@
 <?php
+// Valores padrões usados no tema
+require_once get_template_directory() . '/inc/defaultValues.php';
+
 // funções de personalisação do tema
 require_once get_template_directory() . '/inc/customizer.php';
 
