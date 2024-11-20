@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - Dev
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOMO_HOST_PRAGMATICO_DEV }}
+          username: ${{ secrets.HOMO_USER_PRAGMATICO_DEV }}
+          password: ${{ secrets.HOMO_PASS_PRAGMATICO_DEV }}
+          server-dir: public_html/homo/wp-content/themes/wp-pragmatico/
