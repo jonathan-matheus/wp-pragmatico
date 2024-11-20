@@ -17,4 +17,4 @@ jobs:
           server: ${{ secrets.HOMO_HOST_PRAGMATICO_DEV }}
           username: ${{ secrets.HOMO_USER_PRAGMATICO_DEV }}
           password: ${{ secrets.HOMO_PASS_PRAGMATICO_DEV }}
-          server-dir: public_html/homo/wp-content/themes/wp-pragmatico/
+          server-dir: homo/wp-content/themes/wp-pragmatico/
