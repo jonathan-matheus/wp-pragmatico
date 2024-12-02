@@ -33,6 +33,10 @@
         </div>
 
         <!-- Menu customizado -->
+        <button id="btn_menu_mobile">
+            <span id="hamburger"></span>
+        </button>
+
         <div id="menu_header">
             <!-- MENU -->
             <nav>
@@ -45,15 +49,15 @@
             </nav>
 
             <!-- BOTÃO DESTAQUE -->
-            <div>
+            <div id="button_header">
                 <?php
                 $set_button = get_theme_mod('set_button');
                 if (isset($set_button)) {
                     ?>
-                    <div id="button_header" class="font-poppins-0">
-                        <a href="<?= get_theme_mod('set_button') ?>""><?= get_theme_mod('set_text_button') ?></a>
-                </div>
-                <?php
+                    <div class="font-poppins-0">
+                        <a href="<?= get_theme_mod('set_button') ?>"><?= get_theme_mod('set_text_button') ?></a>
+                    </div>
+                    <?php
                 }
                 ?>
             </div>

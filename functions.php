@@ -1,15 +1,18 @@
 <?php
-// Valores padrões usados no tema
+// valores padrões usados no tema
 require_once get_template_directory() . '/inc/defaultValues.php';
 
-// funções de personalisação do tema
+// personalisação do tema
 require_once get_template_directory() . '/inc/customizer.php';
 
-// funções de enfileiramento de arquivos css
-require_once get_template_directory() . '/functions/css-enfileiramento.php';
+// enfileiramento de arquivos css
+require_once get_template_directory() . '/functions/css_queuing.php';
 
-// funções de suporte
+// suporte
 require_once get_template_directory() . '/functions/suporte.php';
 
-// funções de menus
+// menus
 require_once get_template_directory() . '/functions/menus.php';
+
+// enfileiramento de arquivos js
+require_once get_template_directory() . '/functions/js_queuing.php';

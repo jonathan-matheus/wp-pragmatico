@@ -1,7 +1,6 @@
 <?php
 /**
- * O site possui um conjunto de valores padrões que são usados em diversos locais
- * aqui estão listadas as variáveis que quardam esses valores
+ * Lista de valores padrões de cor e texto do tema
  */
 
 // CORES PADROES

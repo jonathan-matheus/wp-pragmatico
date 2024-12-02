@@ -12,6 +12,7 @@ nav div ul {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 16px;
 }
 
 nav div ul li {
@@ -22,24 +23,18 @@ nav div ul li a {
   text-decoration: none;
 }
 
-nav div ul li {
-  margin-right: 16px;
-}
-
 #menu_header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
+#button_header {
+  margin-left: 16px;
+}
+
 #button_header a {
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 5px;
-}
-
-@media screen and (max-width: 768px) {
-  header {
-    justify-content: space-evenly;
-  }
 }
