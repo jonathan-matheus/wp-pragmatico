@@ -1,0 +1,9 @@
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+  box-sizing: border-box;
+  background-color: var(--wp_pragmatico_background_color);
+  word-wrap: break-word; /* Para navegadores mais antigos */
+  overflow-wrap: break-word; /* Para navegadores modernos */
+}

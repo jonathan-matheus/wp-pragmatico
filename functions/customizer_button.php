@@ -1,98 +1,5 @@
 <?php
 /**
- * TODO: Alterar o nome do arquivo para customizer_color.php. 
- */
-
-/**
- * Define os elementos de cor da sessão de personalização do tema
- * 
- * @param mixed $wp_customize
- * @return void
- */
-function wp_pragmatico_customize_sec_cores($wp_customize)
-{
-    /**
-     * Seção de cores do painel de personalisação do temas
-     */
-    $wp_customize->add_section(
-        'sec_cores',
-        [
-            'title' => __('Color', 'wp-pragmatico')
-        ]
-    );
-
-    /**
-     * Configuração de cor de fundo do tema
-     */
-    $wp_customize->add_setting(
-        'set_cores',
-        [
-            'default' => WP_PRAGMATICO_BACKGROUND_COLOR
-        ]
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'con_cores',
-            [
-                'label' => __('Background Color', 'wp-pragmatico'),
-                'section' => 'sec_cores',
-                'settings' => 'set_cores'
-            ]
-        )
-    );
-
-
-    /**
-     * Configuração de cor de texto principal
-     */
-    $wp_customize->add_setting(
-        'set_text_main_cores',
-        [
-            'default' => WP_PRAGMATICO_TEXT_MAIN_COLOR
-        ]
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'con_text_main_cores',
-            [
-                'label' => __('Main Text Color', 'wp-pragmatico'),
-                'section' => 'sec_cores',
-                'settings' => 'set_text_main_cores'
-            ]
-        )
-    );
-
-    // Cor ao passar o mouse
-    $wp_customize->add_setting(
-        'set_text_hover_main_cores',
-        [
-            'default' => WP_PRAGMATICO_TEXT_HOVER_MAIN_COLOR
-        ]
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'con_text_hover_main_cores',
-            [
-                'label' => __('Main Text Hover Color', 'wp-pragmatico'),
-                'section' => 'sec_cores',
-                'settings' => 'set_text_hover_main_cores'
-            ]
-        )
-    );
-}
-add_action('customize_register', 'wp_pragmatico_customize_sec_cores');
-
-/**
- * TODO: Separa a parte do código abaixo em outro arquivo, chamado customizer_button.php
- */
-
-/**
  * Define os elementos do botão de ação do cabeçalho do site
  * 
  * @param mixed $wp_customize
@@ -225,5 +132,51 @@ function wp_pragmatico_customize_sec_button($wp_customize)
             ]
         )
     );
+
+    $wp_customize->add_section(
+        'sec_button_download',
+        [
+            'title' => __(WP_PRAGMATICO_BUTTON_DOWNLOAD, 'wp-pragmatico')
+        ]
+    );
+
+    // Botão download curriculo
+    $wp_customize->add_setting(
+        'set_button_download_setting',
+        [
+            'default' => WP_PRAGMATICO_BUTTON_DOWNLOAD
+        ]
+    );
+
+    // Texto interno do botão
+    $wp_customize->add_control(
+        'con_botao_download',
+        [
+            'label' => __('Button Text', 'wp-pragmatico'),
+            'section' => 'sec_button_download',
+            'settings' => 'set_button_download_setting',
+            'type' => 'text'
+        ]
+    );
+
+    // Link do botão
+    $wp_customize->add_setting(
+        'set_button_download_link',
+        [
+            'default' => WP_PRAGMATICO_LINK
+        ]
+    );
+
+    $wp_customize->add_control(
+        'con_botao_download_link',
+        [
+            'label' => __('Button Link', 'wp-pragmatico'),
+            'section' => 'sec_button_download',
+            'settings' => 'set_button_download_link',
+            'type' => 'text'
+        ]
+    );
+
+
 }
 add_action('customize_register', 'wp_pragmatico_customize_sec_button');

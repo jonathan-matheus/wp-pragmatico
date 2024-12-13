@@ -7,3 +7,31 @@
   font-family: "Poppins", sans-serif;
   align-items: center;
 }
+
+.font-1-xs {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-1-s {
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.font-1-xxl {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 4rem;
+  line-height: 4.5rem;
+}
+
+.font-2-l {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}

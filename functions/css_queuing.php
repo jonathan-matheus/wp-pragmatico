@@ -9,50 +9,23 @@
  */
 function css_enfileiramento()
 {
-    /**
-     * Enfileira o arquivo css header.css
-     */
-    wp_enqueue_style(
-        'header',
-        get_template_directory_uri() . '/css/header.css',
-        [],
-        '0.0',
-        'all'
-    );
+    $arquivos_css = [
+        'header' => '/css/header.css',
+        'fonts' => '/css/fonts.css',
+        'mobile_menu' => '/css/mobile_menu.css',
+        'general' => '/css/general.css',
+        'cores' => '/css/colors.css',
+        'home' => '/css/home.css'
+    ];
 
-    /**
-     * Enfileira o arquivo css normalisador.css
-     * 
-     * Arquivo responsavel pelas normas gerais de css do site, como container
-     */
-    wp_enqueue_style(
-        'normalisador',
-        get_template_directory_uri() . '/css/nomalisador.css',
-        [],
-        '0.0',
-        'all'
-    );
-
-    /**
-     * Enfileira o arquivo css fonts.css
-     * 
-     * Arquivo responsavel pelas fontes do site
-     */
-    wp_enqueue_style(
-        'fonts',
-        get_template_directory_uri() . '/css/fonts.css',
-        [],
-        '0.0',
-        'all'
-    );
-
-    // Responsavel pelo menu mobile
-    wp_enqueue_style(
-        'mobile_menu',
-        get_template_directory_uri() . '/css/mobile_menu.css',
-        [],
-        '0.0',
-        'all'
-    );
+    foreach ($arquivos_css as $key_arquivo => $value_arquivo) {
+        wp_enqueue_style(
+            $key_arquivo,
+            get_template_directory_uri() . $value_arquivo,
+            [],
+            '0.0',
+            'all'
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'css_enfileiramento');

@@ -15,6 +15,15 @@ nav div ul {
   gap: 16px;
 }
 
+nav ul li a {
+  color: var(--wp_pragmatico_text_main_color);
+  transition: 0.5s;
+}
+
+nav ul li a:hover {
+  color: var(--wp_pragmatico_text_hover_main_color);
+}
+
 nav div ul li {
   list-style: none;
 }
@@ -37,4 +46,12 @@ nav div ul li a {
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 5px;
+  color: var(--wp_pragmatico_text_button_color);
+  background-color: var(--wp_pragmatico_button_background_color);
+  transition: 0.5s;
+}
+
+#button_header a:hover {
+  color: var(--wp_pragmatico_text_hover_button_color);
+  background-color: var(--wp_pragmatico_text_hover_button_color);
 }

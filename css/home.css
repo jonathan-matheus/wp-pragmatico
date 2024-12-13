@@ -1,0 +1,22 @@
+#apresentacao {
+  margin-top: 10rem;
+}
+
+.botao_transparente {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 13px 36px;
+  border: solid 2px var(--wp_pragmatico_button_background_color);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.botao_transparente:hover {
+  background-color: var(--wp_pragmatico_button_background_color);
+  color: black;
+}
+
+a {
+  color: var(--wp_pragmatico_text_main_color);
+  text-decoration: none;
+}
