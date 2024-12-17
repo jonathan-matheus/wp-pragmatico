@@ -15,7 +15,8 @@ function css_enfileiramento()
         'mobile_menu' => '/css/mobile_menu.css',
         'general' => '/css/general.css',
         'cores' => '/css/colors.css',
-        'home' => '/css/home.css'
+        'home' => '/css/home.css',
+        'sobre' => '/css/sobre.css'
     ];
 
     foreach ($arquivos_css as $key_arquivo => $value_arquivo) {

@@ -86,5 +86,81 @@ function wp_pragmatico_customize_sec_text($wp_customize)
             'type' => 'textarea'
         ]
     );
+
+    // Sobre o autor titulo
+    $wp_customize->add_setting(
+        'set_text_about',
+        [
+            'default' => __(WP_PRAGMATICO_SET_TEXT_ABOUT, 'wp-pragmatico')
+        ]
+    );
+
+    // Controle sobre o autor titulo
+    $wp_customize->add_control(
+        'set_text_about',
+        [
+            'label' => __('Text about', 'wp-pragmatico'),
+            'section' => 'sec_text',
+            'settings' => 'set_text_about',
+            'type' => 'text'
+        ]
+    );
+
+    // Texto sobre o autor
+    $wp_customize->add_setting(
+        'set_text_about_description',
+        [
+            'default' => __(WP_PRAGMATICO_SET_TEXT_ABOUT_DESCRIPTION, 'wp-pragmatico')
+        ]
+    );
+
+    // Controle sobre o autor
+    $wp_customize->add_control(
+        'set_text_about_description',
+        [
+            'label' => __('Text about description', 'wp-pragmatico'),
+            'section' => 'sec_text',
+            'settings' => 'set_text_about_description',
+            'type' => 'textarea'
+        ]
+    );
+
+    // Tecnologias usadas titulo
+    $wp_customize->add_setting(
+        'set_text_technologies_title',
+        [
+            'default' => __(WP_PRAGMATICO_SET_TEXT_TECHNOLOGIES_TITLE, 'wp-pragmatico')
+        ]
+    );
+
+    // Controle sobre o autor
+    $wp_customize->add_control(
+        'set_text_technologies_title',
+        [
+            'label' => __('Text technologies title', 'wp-pragmatico'),
+            'section' => 'sec_text',
+            'settings' => 'set_text_technologies_title',
+            'type' => 'text'
+        ]
+    );
+
+    // Lista de tecnologias usadas
+    $wp_customize->add_setting(
+        'set_text_technologies',
+        [
+            'default' => __(WP_PRAGMATICO_SET_TEXT_TECHNOLOGIES, 'wp-pragmatico')
+        ]
+    );
+
+    // Controle da lista de tecnologias usadas
+    $wp_customize->add_control(
+        'set_text_technologies',
+        [
+            'label' => __('Text technologies', 'wp-pragmatico'),
+            'section' => 'sec_text',
+            'settings' => 'set_text_technologies',
+            'type' => 'textarea'
+        ]
+    );
 }
 add_action('customize_register', 'wp_pragmatico_customize_sec_text');

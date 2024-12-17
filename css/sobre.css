@@ -1,0 +1,16 @@
+#sobre {
+  margin-top: 160px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.autor {
+  max-width: 50vw;
+}
+
+@media (max-width: 430px) {
+  .autor {
+    max-width: 100vw;
+  }
+}

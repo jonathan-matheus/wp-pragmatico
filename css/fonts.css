@@ -2,6 +2,7 @@
 * TODO: Mudar para fonte local, ao inves de sempre buscar do google
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap");
 
 .font-poppins-0 {
   font-family: "Poppins", sans-serif;
@@ -20,6 +21,13 @@
   font-weight: lighter;
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.font-1-xl {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 .font-1-xxl {

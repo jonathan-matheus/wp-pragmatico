@@ -26,7 +26,11 @@ $textos_padroes = [
     'WP_PRAGMATICO_SET_TEXT' => 'Hello, I am',
     'WP_PRAGMATICO_SET_TEXT_2' => 'Goku',
     'WP_PRAGMATICO_SET_TEXT_PROFESSION' => 'Programmer',
-    'WP_PRAGMATICO_SET_TEXT_DESCRIPTION' => 'I am a web developer.'
+    'WP_PRAGMATICO_SET_TEXT_DESCRIPTION' => 'I am a web developer.',
+    'WP_PRAGMATICO_SET_TEXT_ABOUT' => 'Sobre',
+    'WP_PRAGMATICO_SET_TEXT_ABOUT_DESCRIPTION' => 'Desenvolvedor web com mais de 5 anos de experiência',
+    'WP_PRAGMATICO_SET_TEXT_TECHNOLOGIES' => '- C/C++',
+    'WP_PRAGMATICO_SET_TEXT_TECHNOLOGIES_TITLE' => 'Tecnologias'
 ];
 
 foreach ($textos_padroes as $key => $value) {
