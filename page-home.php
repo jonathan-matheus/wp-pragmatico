@@ -50,7 +50,7 @@ $experiencia = get_theme_mod('set_text_experience_title', WP_PRAGMATICO_SET_TEXT
         ?>
         <div class="experiencia_post">
             <div>
-                <img src="<?php the_post_thumbnail_url() ?>">
+                <img width="85" height="85" src="<?php the_post_thumbnail_url() ?>">
             </div>
             <div>
                 <p class="font-1-s wp_pragmatico_text_main_color"><?= get_post_meta(get_the_ID(), 'titulo', true) ?></p>
