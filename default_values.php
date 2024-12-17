@@ -30,7 +30,8 @@ $textos_padroes = [
     'WP_PRAGMATICO_SET_TEXT_ABOUT' => 'Sobre',
     'WP_PRAGMATICO_SET_TEXT_ABOUT_DESCRIPTION' => 'Desenvolvedor web com mais de 5 anos de experiência',
     'WP_PRAGMATICO_SET_TEXT_TECHNOLOGIES' => '- C/C++',
-    'WP_PRAGMATICO_SET_TEXT_TECHNOLOGIES_TITLE' => 'Tecnologias'
+    'WP_PRAGMATICO_SET_TEXT_TECHNOLOGIES_TITLE' => 'Tecnologias',
+    'WP_PRAGMATICO_SET_TEXT_EXPERIENCE_TITLE' => 'Experiência'
 ];
 
 foreach ($textos_padroes as $key => $value) {

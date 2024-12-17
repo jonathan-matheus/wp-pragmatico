@@ -10,6 +10,7 @@ $sobre_titulo = get_theme_mod('set_text_about', WP_PRAGMATICO_SET_TEXT_ABOUT);
 $sobre = get_theme_mod('set_text_about_description', WP_PRAGMATICO_SET_TEXT_ABOUT_DESCRIPTION);
 $title_tecnologias = get_theme_mod('set_text_tecnologies_title', WP_PRAGMATICO_SET_TEXT_TECHNOLOGIES_TITLE);
 $tecnolgias = get_theme_mod('set_text_technologies', WP_PRAGMATICO_SET_TEXT_TECHNOLOGIES);
+$experiencia = get_theme_mod('set_text_experience_title', WP_PRAGMATICO_SET_TEXT_EXPERIENCE_TITLE);
 ?>
 <div id="apresentacao">
     <p class="wp_pragmatico_text_main_color font-1-xs"><?php echo $text; ?></p>
@@ -30,6 +31,42 @@ $tecnolgias = get_theme_mod('set_text_technologies', WP_PRAGMATICO_SET_TEXT_TECH
         <h2 class="font-1-xl wp_pragmatico_text_main_color"><?= $title_tecnologias; ?></h2>
         <p class="font-2-l c4"><?= $tecnolgias ?></p>
     </div>
+</div>
+
+<div id="experiencia_title">
+    <h2 class="font-1-xl wp_pragmatico_text_main_color"><?= $experiencia; ?></h2>
+</div>
+<div id="experiencia">
+    <?php
+    $args_experiencia = [
+        'post_type' => 'experiencia',
+        'posts_per_page' => -1,
+    ];
+
+    $query_experiencia = new WP_Query($args_experiencia);
+
+    while ($query_experiencia->have_posts()) {
+        $query_experiencia->the_post();
+        ?>
+        <div class="experiencia_post">
+            <div>
+                <img src="<?php the_post_thumbnail_url() ?>">
+            </div>
+            <div>
+                <p class="font-1-s wp_pragmatico_text_main_color"><?= get_post_meta(get_the_ID(), 'titulo', true) ?></p>
+                <span class="empresa_tempo">
+                    <p class="font-1-xs wp_pragmatico_text_main_color"><?= get_post_meta(get_the_ID(), 'empresa', true) ?>
+                    </p>
+                    <p class="font-1-xs wp_pragmatico_text_main_color"><?= get_post_meta(get_the_ID(), 'tempo', true) ?></p>
+                </span>
+                <span class="excerpt font-2-xs c4">
+                    <?php the_excerpt(); ?>
+                </span>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
 </div>
 <?php
 get_footer();

@@ -1,0 +1,24 @@
+#experiencia_title {
+  margin-top: 160px;
+}
+
+#experiencia {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.experiencia_post {
+  display: flex;
+  gap: 20px;
+}
+
+.excerpt {
+  display: block;
+  margin-top: 12px;
+}
+
+.empresa_tempo {
+  display: block;
+  margin-top: 8px;
+}

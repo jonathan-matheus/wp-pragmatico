@@ -16,7 +16,8 @@ $files = [
     'functions/suporte.php',
     'functions/menus.php',
     'functions/js_queuing.php',
-    'functions/customizer_text.php'
+    'functions/customizer_text.php',
+    'functions/tipos_posts.php'
 ];
 
 $directory = get_template_directory();

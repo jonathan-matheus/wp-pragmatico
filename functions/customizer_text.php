@@ -162,5 +162,24 @@ function wp_pragmatico_customize_sec_text($wp_customize)
             'type' => 'textarea'
         ]
     );
+
+    // Titulo texto experiencia
+    $wp_customize->add_setting(
+        'set_text_experience_title',
+        [
+            'default' => __(WP_PRAGMATICO_SET_TEXT_EXPERIENCE_TITLE, 'wp-pragmatico')
+        ]
+    );
+
+    // Controle sobre o titulo texto experiencia
+    $wp_customize->add_control(
+        'set_text_experience_title',
+        [
+            'label' => __('Text experience title', 'wp-pragmatico'),
+            'section' => 'sec_text',
+            'settings' => 'set_text_experience_title',
+            'type' => 'text'
+        ]
+    );
 }
 add_action('customize_register', 'wp_pragmatico_customize_sec_text');
